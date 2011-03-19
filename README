@@ -1,0 +1,17 @@
+A small framework to get your CMS running in a short time.
+
+========= fasterCMS =========
+* A small framework to get basic functionality of a (page based) CMS
+* A page can contain several content modules
+
+========= Install =========
+* tbe
+
+========= Features =========
+* Based on Rails 3
+* Templating works with plain erb templates
+
+========= Usage =========
+* tbe
+
+
