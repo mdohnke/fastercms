@@ -5,7 +5,7 @@ A small framework to get your CMS running in a short time.
 * A page can contain several content modules
 
 ========= Install =========
-* tbe
+* Clone the repository and start creating your app
 
 ========= Features =========
 * Based on Rails 3
