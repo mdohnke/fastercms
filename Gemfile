@@ -5,10 +5,6 @@ gem 'rails', '3.0.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-platforms :jruby do
-  gem 'jdbc-mysql'
-end
-
 platforms :ruby do
   gem 'mysql2'
 end

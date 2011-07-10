@@ -1,7 +1,22 @@
 class Page < ActiveRecord::Base
-  has_friendly_id :title, :use_slug => true
+  include PagesHelper
+
+  validates_presence_of :title, :name, :description
+  before_validation :ensure_creating_name
+  has_friendly_id :name, :use_slug => true
   acts_as_tree
-  has_and_belongs_to_many :components
-  belongs_to :template
+
+  # Returns path of the current page
+  # Using get_path method from PagesHelper
+  def path
+    return get_path self
+  end
+
+  #protected
+  def ensure_creating_name
+    if name.nil?
+      self.name = title2name(title)
+    end
+  end
 
 end

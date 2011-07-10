@@ -40,6 +40,10 @@ Cms::Application.routes.draw do  resources :pages
   #     end
   #   end
 
+  get "/:id" => "pages#show"
+
+  get "/*parents/:id" => "pages#show"
+
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController

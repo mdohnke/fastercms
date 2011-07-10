@@ -12,7 +12,7 @@ development:
   database: cms_development
   pool: 5
   username: root
-  password: 
+  password: root
   # JRuby doesn't support socket:
   host: 127.0.0.1
   #socket: /var/run/mysqld/mysqld.sock
@@ -27,7 +27,7 @@ test:
   database: cms_test
   pool: 5
   username: root
-  password: 
+  password: root
   # JRuby doesn't support socket:
   host: 127.0.0.1
   #socket: /var/run/mysqld/mysqld.sock
@@ -39,7 +39,7 @@ production:
   database: cms_production
   pool: 5
   username: root
-  password: 
+  password: root
   # JRuby doesn't support socket:
   host: 127.0.0.1
   #socket: /var/run/mysqld/mysqld.sock

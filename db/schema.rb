@@ -12,23 +12,12 @@
 
 ActiveRecord::Schema.define(:version => 20110315200457) do
 
-  create_table "components", :force => true do |t|
-    t.string   "title"
-    t.text     "html_code"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "components_pages", :id => false, :force => true do |t|
-    t.integer "component_id"
-    t.integer "page_id"
-  end
-
   create_table "pages", :force => true do |t|
     t.string   "title"
+    t.string   "name"
     t.string   "chached_slug"
-    t.integer  "template_id"
-    t.boolean  "is_startpage"
+    t.text     "description"
+    t.boolean  "is_startpage", :default => false
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,14 +34,5 @@ ActiveRecord::Schema.define(:version => 20110315200457) do
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
-
-  create_table "templates", :force => true do |t|
-    t.string   "title"
-    t.text     "html_code"
-    t.text     "css_code"
-    t.string   "css_file"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

@@ -9,6 +9,9 @@ A small framework to get your CMS running in a short time.
 
 ========= Features =========
 * Based on Rails 3
+* Depends on
+** http://norman.github.com/friendly_id/
+** http://rubygems.org/gems/acts_as_tree
 * Templating works with plain erb templates
 
 ========= Usage =========
