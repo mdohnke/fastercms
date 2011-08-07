@@ -1,0 +1,44 @@
+<div id="shortcuts">
+  <span class="title">
+    <%= link_to 'fasterCMS', :admin_root, {:title => "Home"} %>
+  </span>
+  <% active =  params["controller"].split("/")[-1] %>
+  <!-- admin home page -->
+  <%= link_to(
+    image_tag((active =="home") ? "admin/home_active.png" : "admin/home.png",
+      :mouseover => "/images/admin/home_over.png",
+      :alt => "Home", :title => "Home"),
+    :admin_root, {:title => "Home"})
+%>
+  <!-- admin web content management -->
+  <%= link_to(
+    image_tag((active =="pages") ? "admin/wcm_active.png" : "admin/wcm.png",
+      :mouseover => "/images/admin/wcm_over.png",
+      :alt => "Web Content Management", :title => "Web Content Management"),
+    :admin_pages, {:title => "Web Content Management"})
+%>
+  <!-- admin media management -->
+  <%= link_to(
+    image_tag((active =="assets") ? "admin/am_active.png" : "admin/am.png",
+      :mouseover => "/images/admin/am_over.png",
+      :alt => "Asset Management", :title => "Asset Management"),
+    :admin_assets, {:title => "Asset Management"})
+%>
+  <!-- admin user management -->
+  <%= link_to(
+    image_tag((active =="users") ? "admin/um_active.png" : "admin/um.png",
+      :mouseover => "/images/admin/um_over.png",
+      :alt => "User Management", :title => "User Management"),
+    :admin_users, {:title => "User Management"})
+%>
+
+  <!-- Show user information -->
+  <div class="userinfo">
+    <% if current_user %>
+      <%= link_to current_user.name, edit_admin_user_path(current_user.id), {:title => "Edit"} %>
+      (<%= link_to "logout", admin_logout_path, {:title => "Logout"} %>)
+    <% else %>
+      <%= link_to "Login", admin_login_path, {:title => "Login"} %>
+    <% end %>
+  </div>
+</div>

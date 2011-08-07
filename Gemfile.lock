@@ -30,6 +30,8 @@ GEM
     activesupport (3.0.5)
     acts_as_tree (0.1.1)
     arel (2.0.9)
+    authlogic (2.1.6)
+      activesupport
     babosa (0.2.2)
     builder (2.1.2)
     erubis (2.6.6)
@@ -74,6 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_tree
+  authlogic
   friendly_id (~> 3.2.1)
   mysql2
-  rails (= 3.0.5)
+  rails

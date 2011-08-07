@@ -40,10 +40,6 @@ Cms::Application.routes.draw do  resources :pages
   #     end
   #   end
 
-  get "/:id" => "pages#show"
-
-  get "/*parents/:id" => "pages#show"
-
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
@@ -51,8 +47,18 @@ Cms::Application.routes.draw do  resources :pages
   #     resources :products
   #   end
   namespace :admin do
+    root :to => "home#index"
+    match "login" => "user_sessions#new"
+    match "logout" => "user_sessions#destroy"
     resources :pages
+    resources :assets
+    resources :users
+    resources :user_sessions
   end
+
+  get "/:id" => "pages#show"
+
+  get "/*parents/:id" => "pages#show"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

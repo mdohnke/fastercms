@@ -1,0 +1,113 @@
+body {
+    background-color: #fff;
+    color: #222222;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN BOX */
+div#login{
+    border: 1px solid #dedede;
+    width: 360px;
+    height: 150px;
+    text-align: center;
+    margin: auto;
+    left: -200px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+div#login h1 {
+    color: #464646;
+    font-size: 1.2em;
+}
+
+div#login label {
+    padding-left: 10px;
+    display: block;
+    width: 90px;
+    float: left;
+    text-align: left;
+}
+
+div#login input {
+    width: 180px;
+}
+
+div#login input[type="submit"] {
+    width: auto;
+}
+
+/* SHORTCUT MENU*/
+
+div#shortcuts {
+    border-bottom: 1px solid #dedede;
+}
+
+div#shortcuts .title {
+    font-size: 1.7em;
+    padding: 10px;
+}
+
+div#shortcuts .title a:hover {
+    text-decoration: none;
+    color: #464646;
+}
+
+div#shortcuts img {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+div#shortcuts div.userinfo {
+    float: right;
+    width: 150px;
+}
+
+/* COMMON NAVIGATION */
+div.admin-nav {
+    width: 15%;
+    float: left;
+}
+
+div.admin-nav ul {
+    margin-top: 0;
+}
+
+div.admin-nav ul li {
+    list-style: none;
+}
+
+div.admin-nav ul li a {
+    display: block;
+    border: 1px solid #dedede;
+    margin: 4px;
+    padding: 2px 5px;
+    color: #123456;
+}
+
+div.admin-nav ul li a:hover {
+    text-decoration: none;
+    background-color: #dedede;
+}
+
+div.admin-content {
+    width: 80%;
+    float: left;
+    border: 1px solid #dedede;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* TABLES */
+table {
+    border-collapse: collapse;
+}

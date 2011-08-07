@@ -4,25 +4,29 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: 
+one:
+  id: 1
   title : "Startseite"
   description : "Eine Startseite"
   is_startpage : true
   parent_id : nil
 
 two:
+  id: 2
   title : "Über uns"
   description : "Informationen über uns"
   is_startpage : false
   parent_id : 1
 
 three:
+  id: 3
   title : "Team"
   description : "Eine Seite über das Team"
   is_startpage : false
   parent_id : 2
 
 four:
+  id: 4
   title : "Kunden"
   description : "Unsere Kunden"
   is_startpage : false

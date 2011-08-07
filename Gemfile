@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -37,3 +37,9 @@ gem "acts_as_tree"
 
 # permalinks durch friendly_id
 gem "friendly_id", "~> 3.2.1"
+
+# Authentifizierung
+gem "authlogic"
+
+# Authorisierung durch CanCan
+#gem "cancan"

@@ -6,6 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :chached_slug
       t.text :description
       t.boolean :is_startpage, :default => false
+      t.boolean :is_locked, :default => false
       t.integer :parent_id
       t.timestamps
     end

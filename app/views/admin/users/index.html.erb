@@ -1,0 +1,35 @@
+<h1>User Management</h1>
+<div class="admin-nav">
+  <ul>
+    <li>
+      <%= link_to "Nutzer" %>
+    </li>
+    <li>
+      <%= link_to "Gruppen"%>
+    </li>
+  </ul>
+</div>
+<div class="admin-content">
+  <div id="users">
+    <%= render :partial => "admin/users/usernav" %>
+    <h2>Nutzerliste</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gruppe</th>
+          <th>eMail</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.group.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to "Edit", edit_admin_user_path(user.id) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

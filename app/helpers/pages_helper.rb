@@ -9,6 +9,7 @@ module PagesHelper
   end
 
   def title2name(title)
+    # sanitize url componente from ApplicationHelper
     return sanitize_url_component title
   end
 
