@@ -2,4 +2,7 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  admin/home: "Home Page"
+  admin/pages: "Web Content Management"
+  admin/assets: "Asset Management"
+  admin/users: "User Management"

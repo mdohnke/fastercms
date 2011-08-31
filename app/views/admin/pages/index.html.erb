@@ -1,25 +1,5 @@
-<h1>Web Content Management</h1>
 <div class="admin-nav">
-  <%=  build_page_tree @pages %>
-
-  <!--<ul>
-    <li>Startseite</li>
-    <li>
-      Mannschaften
-      <ul>
-        <li>Frauen</li>
-        <li>
-          Männer
-          <ul>
-            <li>1. Männer</li>
-            <li>2. Männer</li>
-            <li>3. Männer</li>
-          </ul>
-        </li>
-        <li>Jugend</li>
-      </ul>
-    </li>
-  </ul>-->
+  <%= display_tree_recursive(@pages, 0) { |n| link_to n.title, edit_admin_page_path(n.id) } %>
 </div>
 <div class="admin-content">
   <%= render :partial => "admin/pages/pagenav" %>

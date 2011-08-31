@@ -10,12 +10,14 @@ class Admin::PagesController < Admin::AdminController
   end
 
   def create
-#    begin
-      Page.create! params[:page]
-#    rescue
-      # handle error
-#    end
+    p = Page.new params[:page]
+    p.save!
+#    Page.create! params[:page]
     redirect_to admin_pages_path
   end
 
-end
+  def edit
+    @page = Page.find(params[:id])
+  end
+
+  end

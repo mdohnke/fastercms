@@ -13,12 +13,18 @@ module PagesHelper
     return sanitize_url_component title
   end
 
-  def build_page_tree(pages, result = {})
-    pages.each do |page|
-      result[page.id] = page.title if page.children.empty?
-      result[page.id] = build_page_tree page.children, result
+  def display_tree_recursive(tree, parent_id)
+    ret = "<ul>"
+    tree.each do |node|
+      if node.parent_id == parent_id
+        ret += "<li>"
+        ret += yield node
+        ret += display_tree_recursive(tree, node.id) { |n| yield n } unless node.children.empty?
+        ret += "</li>"
+      end
     end
-    return result
+    ret += "</ul>"
+    ret.html_safe
   end
 
 end

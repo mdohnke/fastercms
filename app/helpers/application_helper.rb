@@ -27,13 +27,13 @@ module ApplicationHelper
       downcase
   end
 
-  # TODO
-  # builds a tree with all child pages
-  def pagetree(page, tree = {})
-    #    return page.title unless page.children
-    #    page.children.each do |child|
-    #
-    #    end
+  # development stuff
+  def show_debug_info html = ""
+    html << '<fieldset id="debug">'
+    html << '<legend>Debug-Info</legend>'
+    html << params.to_s
+    html << '</fieldset>'
+    html.html_safe
   end
 
 end
