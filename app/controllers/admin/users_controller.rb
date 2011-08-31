@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::AdminController
+  load_and_authorize_resource
 
   # GET /users
   # GET /users.xml

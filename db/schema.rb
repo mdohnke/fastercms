@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20110807172119) do
     t.boolean  "is_startpage", :default => false
     t.boolean  "is_locked",    :default => false
     t.integer  "parent_id"
+    t.integer  "pages_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

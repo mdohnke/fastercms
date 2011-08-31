@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cms</title>
+  <title><%= params[:title] || "CMS"  %> </title>
   <%= stylesheet_link_tag 'main', 'static'%>
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
   <%= javascript_include_tag 'rails' %>

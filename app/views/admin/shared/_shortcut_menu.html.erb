@@ -25,20 +25,22 @@
     :admin_assets, {:title => "Asset Management"})
 %>
   <!-- admin user management -->
-  <%= link_to(
-    image_tag((active =="users") ? "admin/um_active.png" : "admin/um.png",
-      :mouseover => "/images/admin/um_over.png",
-      :alt => "User Management", :title => "User Management"),
-    :admin_users, {:title => "User Management"})
-%>
+  <% if can? :manage, User %>
+    <%= link_to(
+      image_tag((active =="users") ? "admin/um_active.png" : "admin/um.png",
+        :mouseover => "/images/admin/um_over.png",
+        :alt => "User Management", :title => "User Management"),
+      :admin_users, {:title => "User Management"})
+    %>
+  <% end %>
 
-  <!-- Show user information -->
-  <div class="userinfo">
-    <% if current_user %>
-      <%= link_to current_user.name, edit_admin_user_path(current_user.id), {:title => "Edit"} %>
-      (<%= link_to "logout", admin_logout_path, {:title => "Logout"} %>)
-    <% else %>
-      <%= link_to "Login", admin_login_path, {:title => "Login"} %>
-    <% end %>
+    <!-- Show user information -->
+    <div class="userinfo">
+      <% if current_user %>
+        <%= link_to current_user.name, edit_admin_user_path(current_user.id), {:title => "Edit"} %>
+        (<%= link_to "logout", admin_logout_path, {:title => "Logout"} %>)
+      <% else %>
+        <%= link_to "Login", admin_login_path, {:title => "Login"} %>
+      <% end %>
+    </div>
   </div>
-</div>

@@ -1,7 +1,24 @@
-<h1>New Page</h1>
+<h2>Neue Seite</h2>
 <%= form_for :page, :url =>{:action => :create} do |f|%>
-  <%= f.text_field :title %><br />
-
-  <%= f.text_field :parent_id %>
+  <p>
+    <%= f.label :title, "Titel*" %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :name, "Name" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description, "Beschreibung" %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :is_startpage, "Startseite?" %><br />
+    <%= f.check_box :is_startpage %>
+  </p>
+  <p>
+    <%= f.label :parent_id, "Übergeordnete Seite" %><br />
+    <%= f.collection_select(:parent_id, Page.all, :id, :name, :prompt => true) %>
+  </p>
   <%= f.submit %>
 <% end %>

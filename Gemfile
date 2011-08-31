@@ -38,8 +38,8 @@ gem "acts_as_tree"
 # permalinks durch friendly_id
 gem "friendly_id", "~> 3.2.1"
 
-# Authentifizierung
+# Authentifizierung durch Authlogic
 gem "authlogic"
 
 # Authorisierung durch CanCan
-#gem "cancan"
+gem "cancan"

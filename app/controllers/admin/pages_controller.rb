@@ -2,6 +2,7 @@ class Admin::PagesController < Admin::AdminController
 
   def index
     @pages = Page.all
+    @hp = Page.where(:is_startpage => true).first
   end
 
   def new
@@ -9,7 +10,11 @@ class Admin::PagesController < Admin::AdminController
   end
 
   def create
-    Page.create! params[:page]
+#    begin
+      Page.create! params[:page]
+#    rescue
+      # handle error
+#    end
     redirect_to admin_pages_path
   end
 

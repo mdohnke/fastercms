@@ -8,6 +8,7 @@ class CreatePages < ActiveRecord::Migration
       t.boolean :is_startpage, :default => false
       t.boolean :is_locked, :default => false
       t.integer :parent_id
+      t.integer :pages_count
       t.timestamps
     end
   end

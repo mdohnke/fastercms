@@ -8,6 +8,9 @@ class CreateGroups < ActiveRecord::Migration
     Group.create(
       :name => "Administrators"
     )
+    admin = User.first
+    admin.group = Group.first
+    admin.save!
 
   end
 

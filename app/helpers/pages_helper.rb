@@ -13,4 +13,12 @@ module PagesHelper
     return sanitize_url_component title
   end
 
+  def build_page_tree(pages, result = {})
+    pages.each do |page|
+      result[page.id] = page.title if page.children.empty?
+      result[page.id] = build_page_tree page.children, result
+    end
+    return result
+  end
+
 end

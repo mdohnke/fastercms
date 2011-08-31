@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
     c.login_field = :email            # email is the login field
     c.validate_login_field = false    # There is no login field, so don't validate it
   end
+
+  def admin?
+    return self.group.id == 1
+  end
+
 end

@@ -34,6 +34,7 @@ GEM
       activesupport
     babosa (0.2.2)
     builder (2.1.2)
+    cancan (1.6.5)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     friendly_id (3.2.1)
@@ -77,6 +78,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_tree
   authlogic
+  cancan
   friendly_id (~> 3.2.1)
   mysql2
   rails
