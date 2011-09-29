@@ -1,17 +1,19 @@
 A small framework to get your CMS running in a short time.
 
 ========= fasterCMS =========
-* A small framework to get basic functionality of a (page based) CMS
+* A small framework to get the basic functionality of a (page/tree based) CMS
 * A page can contain several content modules
 
 ========= Install =========
 * Clone the repository and start creating your app
+* Detailed descriptions follows
 
 ========= Features =========
 * Based on Rails 3
 * Depends on
 ** http://norman.github.com/friendly_id/
 ** http://rubygems.org/gems/acts_as_tree
+** http://jejacks0n.github.com/mercury/
 * Templating works with plain erb templates
 
 ========= Usage =========

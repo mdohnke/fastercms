@@ -6,7 +6,7 @@ gem 'rails', "~> 3.1.0"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'mysql2'
-gem 'pg', :require => 'pg'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -42,3 +42,6 @@ gem "authlogic"
 
 # Authorisierung durch CanCan
 gem "cancan"
+
+# WYSIWYG Editor
+gem 'mercury-rails'
