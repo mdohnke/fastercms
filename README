@@ -15,5 +15,7 @@ A small framework to get your CMS running in a short time.
 * Templating works with plain erb templates
 
 ========= Usage =========
-* tbe
-* test
+* to be done
+
+========== Development ==========
+* Development concentrates now on postgresql, thanks to rails other DMBS should not be critical
