@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Cms::Application.config.secret_token = 'bd8e509442c33b29dda679b3d5247e3e175b162a1e70afe4e2ac7fb0e99496527b30c1cdcf34bcd8a2e34d0b674b8cd43dd101c3bad72e9ac910a22c9ccefa50'
+Cms::Application.config.secret_token = '1eec67444ee4bb1fa003abb51e7668ffd1492bef80cb46d612df0a78dc45dbe52579b8b5dad926add0916a246a66e5f547dced0063f40fefe4b45d950b52fd38'

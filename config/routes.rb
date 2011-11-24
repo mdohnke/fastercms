@@ -1,5 +1,4 @@
-Cms::Application.routes.draw do  resources :pages
-
+Cms::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -46,6 +45,8 @@ Cms::Application.routes.draw do  resources :pages
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  # Admin space
   namespace :admin do
     root :to => "home#index"
     match "login" => "user_sessions#new"
@@ -56,13 +57,23 @@ Cms::Application.routes.draw do  resources :pages
     resources :user_sessions
   end
 
-  get "/:id" => "pages#show"
-
-  get "/*parents/:id" => "pages#show"
+  # Route for Mercury editor
+  match '/editor(/*requested_uri)(.:format)' => 'mercury#edit'
+  
+  # Route for assets
+  
+  
+  # Route for all other pages 
+  #match '*requested_uri' => 'pages#show'
+  
+  # Save content
+  #post "/:id" => "pages#create"
+  
+  #post "/*parents/:id" => "pages#create"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "pages#index"
+  root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 

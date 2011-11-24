@@ -9,7 +9,7 @@
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <%= show_debug_info if DEBUG %>
+    <%#= show_debug_info if DEBUG %>
     <%= render 'admin/shared/shortcut_menu' if current_user %>
     <h1><%= I18n.t(params[:controller]) %></h1>
     <%= yield %>

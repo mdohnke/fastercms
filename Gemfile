@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', "~> 3.1.0"
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,14 +8,23 @@ gem 'rails', "~> 3.1.0"
 #gem 'mysql2'
 gem 'pg'
 
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
+# To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Bundle the extra gems:
@@ -31,16 +40,21 @@ gem 'pg'
 #   gem 'webrat'
 # end
 
-# Seiten und Unterseiten durch acts_as_tree
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
+
+# Pages and sub pages done by acts_as_tree
 gem "acts_as_tree"
 
-# permalinks durch friendly_id
+# Permalinks done by friendly_id
 gem "friendly_id", "~> 3.2.1"
 
-# Authentifizierung durch Authlogic
+# Authentification done by Authlogic
 gem "authlogic"
 
-# Authorisierung durch CanCan
+# Authorization done by CanCan
 gem "cancan"
 
 # WYSIWYG Editor

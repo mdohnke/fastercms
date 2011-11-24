@@ -6,12 +6,17 @@ class PagesController < ApplicationController
     @hp = Page.where(:is_startpage => true).first
     if @hp.nil?
       redirect_to admin_root_url
+    else
+      redirect_to "/#{@hp.name}"
+      # render homepage
     end
-    redirect_to "/#{@hp.name}"
-    # render homepage
   end
 
+  # GET
   def show
+    puts "="*100
+    puts params.inspect
+    puts "="*100
     if params[:parents].nil?
       @page = Page.where(:is_startpage => true).first
     else
@@ -20,6 +25,13 @@ class PagesController < ApplicationController
     end
     render_404 if @page.nil?
     params[:title] = @page.title
+  end
+  
+  # POST
+  def create
+    puts "*"*100
+    puts params.inspect
+    puts "*"*100
   end
 
 end
